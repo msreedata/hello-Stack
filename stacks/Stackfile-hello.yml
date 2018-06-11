@@ -12,7 +12,7 @@ services:
         parallelism: 2
         delay: 10s
       restart_policy:
-        condition: on-failure
+        condition: any
 
   php:
     image: hellophp:v2
@@ -26,7 +26,7 @@ services:
         parallelism: 2
         delay: 10s
       restart_policy:
-        condition: on-failure
+        condition: any
 
   go:
     image: hellogo:v2
@@ -40,7 +40,7 @@ services:
         parallelism: 2
         delay: 10s
       restart_policy:
-        condition: on-failure
+        condition: any
 
 networks:
   frontend:
