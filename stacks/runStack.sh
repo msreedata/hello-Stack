@@ -4,7 +4,7 @@ if [[ $projectDir && -d $projectDir ]];then
 sudo docker swarm init
 sudo docker stack rm $stackName
 
-sleep 5
+sleep 12
 sudo docker stack deploy --compose-file $projectDir/stacks/Stackfile-hello.yml $stackName
 
 #view stack details
