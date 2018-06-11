@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #initialize repo with folders and pull latest from git remote
-. ./initRepo.sh
+. ./stacks/initRepo.sh
 
 #build latest docker image for testing
 echo "Project path :  $projectDir"
