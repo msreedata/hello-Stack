@@ -6,5 +6,5 @@
 #
 echo "Project path :  $projectDir"
 pushd $projectDir
-. ./stacks/buildimage.sh
+. ./stacks/buildImages.sh
 popd
