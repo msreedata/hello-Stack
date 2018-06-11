@@ -3,8 +3,9 @@ stackName=hellov2
 if [[ $projectDir && -d $projectDir ]];then
 sudo docker swarm init
 sudo docker stack rm $stackName
-
-sleep 30
+sleep 5
+sudo docker stack ls
+sleep 5
 sudo docker stack deploy --compose-file $projectDir/stacks/Stackfile-hello.yml $stackName
 
 #view stack details
