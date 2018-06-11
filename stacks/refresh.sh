@@ -4,4 +4,6 @@
 . ./initRepo
 
 #
-echo $projectDir
+echo "Project path :  $projectDir"
+
+. ./buildimage.sh
