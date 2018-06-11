@@ -1,0 +1,48 @@
+version: "3.4"
+services:
+  node:
+    image: hellonode:v2
+    build:
+      context: ./../hello-Node
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+
+  php:
+    image: hellophp:v2
+    build:
+      context: ./../hello-Php
+    ports:
+      - "81:80"
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+
+  go:
+    image: hellogo:v2
+    build:
+      context: ./../hello-Go
+    ports:
+      - "82:80"
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+
+networks:
+  frontend:
+volumes:
+  hello-data:
