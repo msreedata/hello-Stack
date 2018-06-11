@@ -11,5 +11,6 @@ if [ ! -d $projectDir ]; then
 fi
 
 pushd $projectDir
+echo pulling code..
 git pull
 popd
