@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #initialize repo with folders
-. ./initRepo
+. ./initRepo.sh
 
 #
 echo "Project path :  $projectDir"
