@@ -6,4 +6,4 @@
 #
 echo "Project path :  $projectDir"
 
-. ./buildimage.sh
+. ./stacks/buildimage.sh
