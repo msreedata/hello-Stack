@@ -1,10 +1,13 @@
 #!/bin/bash
 
-#initialize repo with folders
+#initialize repo with folders and pull latest from git remote
 . ./initRepo.sh
 
-#
+#build latest docker image for testing
 echo "Project path :  $projectDir"
-pushd $projectDir
 . ./stacks/buildImages.sh
-popd
+
+#update stack with new image
+echo "Project path :  $projectDir"
+. ./stacks/runStack.sh
+

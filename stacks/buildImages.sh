@@ -11,5 +11,5 @@ if [[ $projectDir && -d $projectDir ]];then
 
     sudo docker image ls
 else
-    echo "...skipping build."
+    echo "...skipping Build Image."
 fi
