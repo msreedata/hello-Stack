@@ -76,7 +76,7 @@ h1 {
         <hr>
         <p><a href="/envdump">Dump environment variables</a></p>
         <hr>
-        This page generated in {{ .Elapsed }} seconds from {{ .port }}.
+        This page generated in {{ .Elapsed }} seconds from {{ .MyHost }}.
     </body>
 </html>
 `)
@@ -90,12 +90,23 @@ h1 {
 	if name == "" {
 		name = "World"
 	}
+
+	u, err := url.Parse(s)
+    if err != nil {
+        panic(err)
+    }
+	host, port, _ := net.SplitHostPort(u.Host)
+    fmt.Println(host)
+	fmt.Println(port)
+	
 	if err := tmpl.Execute(w, struct {
 		Name    string
 		Elapsed time.Duration
+		MyHost string
 	}{
 		Name:    name,
 		Elapsed: time.Now().Sub(t0),
+		MyHost: host
 	}); err != nil {
 		log.Printf("executing template: %v", err)
 	}
