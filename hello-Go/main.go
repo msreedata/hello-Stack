@@ -93,7 +93,7 @@ h1 {
 		name = "World"
 	}
 
-	s := req.URL.RequestURI()
+	s := r.Host
 	if err != nil {
         panic(err)
     }
