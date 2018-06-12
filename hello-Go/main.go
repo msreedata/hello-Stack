@@ -93,6 +93,10 @@ h1 {
 		name = "World"
 	}
 
+	s := req.URL.RequestURI()
+	if err != nil {
+        panic(err)
+    }
 	u, err := url.Parse(s)
     if err != nil {
         panic(err)
