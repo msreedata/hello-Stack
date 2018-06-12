@@ -71,12 +71,12 @@ h1 {
         <p>Examples:</p>
         <ul>
             <li><a href=".">Hello, Go (default)</a>
-            <li><a href="?name=docker%Studio">?name=docker Studio</a>
+            <li><a href="?name=docker%20Studio">?name=docker Studio</a>
         </ul>
         <hr>
         <p><a href="/envdump">Dump environment variables</a></p>
         <hr>
-        This page generated in {{ .Elapsed }} seconds.
+        This page generated in {{ .Elapsed }} seconds from {{ .host }}.
     </body>
 </html>
 `)
