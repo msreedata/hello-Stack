@@ -76,7 +76,7 @@ h1 {
         <hr>
         <p><a href="/envdump">Dump environment variables</a></p>
         <hr>
-        This page generated in {{ .Elapsed }} seconds from {{ .host }}.
+        This page generated in {{ .Elapsed }} seconds from {{ .port }}.
     </body>
 </html>
 `)
