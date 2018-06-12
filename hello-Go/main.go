@@ -106,7 +106,7 @@ h1 {
 	}{
 		Name:    name,
 		Elapsed: time.Now().Sub(t0),
-		MyHost: host
+		MyHost: host,
 	}); err != nil {
 		log.Printf("executing template: %v", err)
 	}
