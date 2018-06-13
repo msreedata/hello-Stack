@@ -14,6 +14,11 @@ sudo docker build --no-cache ./hello-Node -t linBox:5000/hellonode:v2
 sudo docker build --no-cache ./hello-Php -t linBox:5000/hellophp:v2
 sudo docker build --no-cache ./hello-Go -t linBox:5000/hellogo:v2
 
+#push image to registry
+sudo docker push linBox:5000/hellonode:v2
+sudo docker push linBox:5000/hellophp:v2
+sudo docker push linBox:5000/hellogo:v2
+
 #update stack with new image
 echo "Project path :  $projectDir"
 . ./stacks/runStack.sh
