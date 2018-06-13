@@ -6,9 +6,9 @@ projectDir=$(pwd)
 
 #build latest docker image for testing
 echo "Project path :  $projectDir"
-. ./buildImages.sh
+. ./stacks/buildImages.sh
 
 #update stack with new image
 echo "Project path :  $projectDir"
-. ./runStack.sh
+. ./stacks/runStack.sh
 
