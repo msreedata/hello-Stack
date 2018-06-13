@@ -2,7 +2,7 @@
 stackName=hellov2
 if [[ $projectDir && -d $projectDir ]];then
 
-if docker node ls > /dev/null 2>&1; then
+if sudo docker node ls > /dev/null 2>&1; then
   echo This node is already in Docker Swarm
 else
   echo Initializing Docker Swarm mode now...
