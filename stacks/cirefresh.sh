@@ -5,6 +5,7 @@
 projectDir=$(pwd)
 
 #install trusted certificate
+sudo mkdir -p /etc/docker/certs.d/linBox:5000
 sudo cp ./stacks/linBox.crt /etc/docker/certs.d/linBox:5000/ca.crt
 
 #build latest docker image for testing
