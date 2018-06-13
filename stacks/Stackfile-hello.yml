@@ -1,7 +1,7 @@
 version: "3.4"
 services:
   node:
-    image: hellonode:v2
+    image: linBox:5000/hellonode:v2
     build:
       context: ./../hello-Node
     ports:
@@ -15,7 +15,7 @@ services:
         condition: any
 
   php:
-    image: hellophp:v2
+    image: linBox:5000/hellophp:v2
     build:
       context: ./../hello-Php
     ports:
@@ -29,7 +29,7 @@ services:
         condition: any
 
   go:
-    image: hellogo:v2
+    image: linBox:5000/hellogo:v2
     build:
       context: ./../hello-Go
     ports:
