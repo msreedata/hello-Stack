@@ -6,9 +6,9 @@ projectDir=$(pwd)
 
 #build latest docker image for testing
 echo "Project path :  $projectDir"
-docker build --no-cache ./hello-Node -t hellonode:v2
-docker build --no-cache ./hello-Php -t hellophp:v2
-docker build --no-cache ./hello-Go -t hellogo:v2
+sudo docker build --no-cache ./hello-Node -t hellonode:v2
+sudo docker build --no-cache ./hello-Php -t hellophp:v2
+sudo docker build --no-cache ./hello-Go -t hellogo:v2
 
 #update stack with new image
 echo "Project path :  $projectDir"
