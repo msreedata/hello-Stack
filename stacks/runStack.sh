@@ -1,7 +1,15 @@
 #!/bin/bash
 stackName=hellov2
 if [[ $projectDir && -d $projectDir ]];then
-sudo docker swarm init
+
+if docker node ls > /dev/null 2>&1; then
+  echo This node is already in Docker Swarm
+else
+  echo Initializing Docker Swarm mode now...
+  sudo docker swarm init
+fi
+
+#remove existing stack
 sudo docker stack rm $stackName
 
 
