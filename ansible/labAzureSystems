@@ -1,0 +1,16 @@
+[ubuntu]
+linBox4
+
+[cent]
+lincent1
+lincent3
+lincent4
+
+[linuxBoxes:children]
+ubuntu
+cent
+
+[linuxBoxes:vars]
+ansible_ssh_user=LinuxAdmin
+#ansible_ssh_pass=Password000
+#ansible_become_pass=Password000
