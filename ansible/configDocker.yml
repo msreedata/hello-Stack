@@ -11,6 +11,8 @@
   become_method: sudo
   tasks:
       - lineinfile: "dest=/etc/sudoers regexp='^linuxadmin' line='linuxadmin ALL=(ALL) NOPASSWD: ALL' state=present"
+      - name: create docker cert dir
+        file: path=/etc/docker/certs.d/linBox:5000 state=directory
       - name: Install comodo cert
         copy: src=linBox.crt dest=/etc/docker/certs.d/linBox:5000/ca.crt
 
