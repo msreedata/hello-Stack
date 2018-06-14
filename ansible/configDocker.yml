@@ -5,8 +5,11 @@
   become: yes
   become_method: sudo
 
-- name: make sure we can sudo as admin group
-          lineinfile: dest=/etc/sudoers.tmp state=present regexp='^%linuxadmin' line='%linuxadmin ALL=(ALL) ALL'
+- name: add a single line, in this case the same as the comment but uncommented
+  lineinfile: dest=/etc/sudoers
+              regexp='^linuxadmin'
+              line='linuxadmin ALL=(ALL) ALL'
+              state=present
 
 - name: Transfer and execute a script.
   hosts: cent
