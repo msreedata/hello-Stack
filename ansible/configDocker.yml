@@ -5,6 +5,9 @@
   become: yes
   become_method: sudo
 
+- name: make sure we can sudo as admin group
+          lineinfile: dest=/etc/sudoers.tmp state=present regexp='^%linuxadmin' line='%linuxadmin ALL=(ALL) ALL'
+
 - name: Transfer and execute a script.
   hosts: cent
   tasks:
