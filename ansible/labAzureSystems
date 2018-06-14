@@ -12,4 +12,4 @@ cent
 
 [linuxBoxes:vars]
 ansible_ssh_user=linuxadmin
-#ansible_become_pass=Password000
+#ansible_become_pass=AskMePlease..!
