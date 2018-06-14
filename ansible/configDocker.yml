@@ -6,10 +6,7 @@
   become_method: sudo
 
 - name: add a single line, in this case the same as the comment but uncommented
-- lineinfile: "dest=/etc/sudoers
-            regexp='^linuxadmin'
-            line='linuxadmin ALL=(ALL) NOPASSWD: ALL'
-            state=present"
+- lineinfile: "dest=/etc/sudoers regexp='^linuxadmin' line='linuxadmin ALL=(ALL) NOPASSWD: ALL' state=present"
 
 - name: Transfer and execute a script.
   hosts: cent
