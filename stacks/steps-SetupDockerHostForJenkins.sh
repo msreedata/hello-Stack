@@ -28,10 +28,14 @@
 #!/bin/bash
 #add sudo launch without password
 #sudo visudo # 
-echo 'linuxadmin ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+#echo 'linuxadmin ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+
+sudo sh -c "echo '$(whoami) ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers"
 sudo yum -y install java
 sudo yum -y install git
+sudo yum -y install wget
 sudo wget -qO- https://get.docker.com/ | sh
+sudo usermod -aG docker $(whoami)
 sudo docker version
 sudo systemctl enable docker
 sudo systemctl start docker
